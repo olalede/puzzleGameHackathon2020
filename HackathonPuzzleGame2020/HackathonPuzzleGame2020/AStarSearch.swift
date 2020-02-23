@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import MBProgressHUD
 
-func aStar (startState: Board, goalState: Board, heuristicFunction: HeuristicFunctionType, successorFunction: SuccessorFunctionType) -> [Int] {
-    var heuristicValue = heuristicFunction(theState: startState)
+func aStar (startState: Board, goalState: Board, heuristicFunction: @escaping HeuristicFunctionType, successorFunction: SuccessorFunctionType) -> [Int] {
+    let heuristicValue = heuristicFunction(startState)
     var openList: [SearchNode] = [SearchNode(board: startState, lastMoveIndex: nil, heuristicValue: heuristicValue, costValue: 0)]
     var closedList: [SearchNode] = []
     var daughters: [SearchNode] = []
@@ -24,32 +25,32 @@ func aStar (startState: Board, goalState: Board, heuristicFunction: HeuristicFun
         }
         
      
-        let currentNode = openList.removeAtIndex(0)
+        let currentNode = openList.remove(at: 0)
         closedList.append(currentNode)
         
         if currentNode.board == goalState {
-            traceSolution(currentNode, startState, &winningPath)
+            traceSolution(goalNode: currentNode, startState: startState, winningMoves: &winningPath)
             break
         }
 
       
-        var daughters = successorFunction(currentNode: currentNode, heuristicFunction: heuristicFunction)
+        let daughters = successorFunction(currentNode, heuristicFunction)
         
-        var daughtersInOpenList = daughters.filter {
-            $0.isInList(openList)
+        let daughtersInOpenList = daughters.filter {
+            $0.isInList(list: openList)
         }
         
-        var daughtersInClosedList = daughters.filter {
-            $0.isInList(closedList)
+        let daughtersInClosedList = daughters.filter {
+            $0.isInList(list: closedList)
         }
         
-        var daughtersNewToBothLists = daughters.filter {
-            !$0.isInList(openList) && !$0.isInList(closedList)
+        let daughtersNewToBothLists = daughters.filter {
+            !$0.isInList(list: openList) && !$0.isInList(list: closedList)
         }
         openList += daughtersNewToBothLists
         
-        updateOpenListWithBetterDaughters(daughtersInOpenList, &openList)
-        updateClosedListWithBetterDaughters(daughtersInClosedList, &openList, &closedList)
+        updateOpenListWithBetterDaughters(daughters: daughtersInOpenList, openList: &openList)
+        updateClosedListWithBetterDaughters(daughters: daughtersInClosedList, openList: &openList, closedList: &closedList)
         
         openList.sort {
             (aNode: SearchNode, bNode: SearchNode) -> Bool in
@@ -65,9 +66,9 @@ func aStar (startState: Board, goalState: Board, heuristicFunction: HeuristicFun
 
 func updateOpenListWithBetterDaughters(daughters: [SearchNode], openList: inout [SearchNode])  {
     for eachDaughter in daughters {
-        for (index, openNode) in enumerate(openList) {
+        for (index, openNode) in openList.enumerated(){ //enumerate(openList) {
             if eachDaughter.board == openNode.board {
-                if eachDaughter.costValue < openNode.costValue {
+                if Unicode.CanonicalCombiningClass(rawValue: Unicode.CanonicalCombiningClass.RawValue(eachDaughter.costValue!)) < Unicode.CanonicalCombiningClass(rawValue: Unicode.CanonicalCombiningClass.RawValue(openNode.costValue!)) {
                     openList[index] = eachDaughter
                 }
 
@@ -79,10 +80,10 @@ func updateOpenListWithBetterDaughters(daughters: [SearchNode], openList: inout 
 
 func updateClosedListWithBetterDaughters(daughters: [SearchNode], openList: inout [SearchNode], closedList: inout [SearchNode])  {
     for eachDaughter in daughters {
-        for (index, closedNode) in enumerate(closedList) {
+        for (index, closedNode) in closedList.enumerated() { //enumerate(closedList) {
             if eachDaughter.board == closedNode.board {
                 if eachDaughter.costValue! < closedNode.costValue! {
-                    openList.removeAtIndex(index)
+                    openList.remove(at: index)    //removeAtIndex(index)
                     closedList.append(eachDaughter)
                 }
                 

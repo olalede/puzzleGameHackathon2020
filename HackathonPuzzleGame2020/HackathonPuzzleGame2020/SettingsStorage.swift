@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MBProgressHUD
 
 
 enum Settings: Int {
@@ -29,7 +30,6 @@ class SettingsStorage {
     
     let savedSearchSettingKey = "savedSearchSettingKey"
     
-    // TODO: change this so that this class only writes/reads from NSUserDefaults on alloc and dealloc
     var savedSearchSetting: Settings {
     get {
         if let rawValue = UserDefaults.standard.object(forKey: savedSearchSettingKey) as? Int {

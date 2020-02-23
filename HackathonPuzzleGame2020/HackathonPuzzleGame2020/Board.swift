@@ -7,13 +7,13 @@
 //
 
 import Foundation
-
+import MBProgressHUD
 
 func == (lhs: Coordinate, rhs: Coordinate) -> Bool {
     return (lhs.y == rhs.y) && (lhs.x == rhs.x)
 }
 
-struct Coordinate: Printable {
+struct Coordinate: CustomStringConvertible {
     var x: Int
     var y: Int
     
@@ -34,7 +34,7 @@ func != (lhs: Piece, rhs: Piece) -> Bool {
     return !(lhs == rhs)
 }
 
-class Piece: Printable, Equatable {
+class Piece: CustomStringConvertible, Equatable {
     let pieceName: String
     let winningIndex: Int
     
@@ -65,7 +65,7 @@ func == (lhs: Board, rhs: Board) -> Bool {
     return isSame
 }
 
-class Board: Printable {
+class Board: CustomStringConvertible {
     var pieces = [Piece]()
     let columns: Int
     let rows: Int
@@ -82,7 +82,7 @@ class Board: Printable {
         var i = 0
         for row in 0...rows {
             for col in 0...columns {
-                pieces.append(Piece(pieceName: "\(i)", winningIndex: i+=1))
+            //    pieces.append(Piece(pieceName: "\(i)", winningIndex: ))//winningIndex: i+=1))
             }
         }
     }
@@ -91,7 +91,7 @@ class Board: Printable {
         self.init(rows: board.rows, columns: board.columns);
         empty = board.empty
         winningLocations = board.winningLocations
-        pieces = board.pieces.copy()
+     //   pieces = board.pieces.copy()
     }
     
     var description: String {
@@ -178,7 +178,8 @@ class Board: Printable {
                 }
                 
                 if winningLocations == rows * columns - 1 {
-                    NotificationCenter.defaultCenter().postNotification(NSNotification(name: gameWonNotification, object: nil))
+                   // NotificationCenter.defaultCenter.postNotification(NSNotification(name: gameWonNotification, object: nil))
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: gameWonNotification), object: nil)
                 }
                 
                 break;

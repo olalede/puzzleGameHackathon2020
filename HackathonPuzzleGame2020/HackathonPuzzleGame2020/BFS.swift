@@ -8,6 +8,7 @@
 
 
 import Foundation
+import MBProgressHUD
 
 func bfs (startState: Board, goalState: Board, successorFunction: SuccessorFunctionType) -> [Int] {
     var openList: [SearchNode] = [SearchNode(board: startState, lastMoveIndex: nil, heuristicValue: nil, costValue: nil)]
@@ -22,20 +23,20 @@ func bfs (startState: Board, goalState: Board, successorFunction: SuccessorFunct
             break
         }
         
-        let currentNode = openList.removeAtIndex(0) 
+        let currentNode = openList.remove(at: 0) //openList.removeAtIndex(0) 
         closedList.append(currentNode)
         
         if currentNode.board == goalState {
             
-            traceSolution(currentNode, startState, &winningPath)
+            traceSolution(goalNode: currentNode, startState: startState, winningMoves: &winningPath)
             break
         }
         
-        var daughters = successorFunction(currentNode: currentNode, nil)
+        var daughters = successorFunction(currentNode, nil)
         
        
         daughters = daughters.filter {
-            !$0.isInList(openList) && !$0.isInList(closedList)
+            !$0.isInList(list: openList) && !$0.isInList(list: closedList)
         }
         
         openList += daughters

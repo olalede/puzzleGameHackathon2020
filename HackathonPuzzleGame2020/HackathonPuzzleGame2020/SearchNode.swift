@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import MBProgressHUD
 
 
-class SearchNode: Printable {
+class SearchNode: CustomStringConvertible {
     var board: Board
     var lastMoveIndex: Int?
     var children: [SearchNode] = []
-  
+
     weak var parent: SearchNode?
     var heuristicValue: Double?
     var costValue: Double?
@@ -25,7 +26,8 @@ class SearchNode: Printable {
         self.costValue = costValue
     }
     
-   //iterates throughh O(N) list array
+    /// Iterates through the list array O(N)
+    /// This is an example of writing a documentation comment
     func isInList (list: [SearchNode]) -> Bool {
         for eachNode in list {
             let thisBoard = eachNode.board
@@ -38,7 +40,7 @@ class SearchNode: Printable {
     }
     
     var description: String {
-        return "(board = \(board), lastMoveIndex = \(String(describing: lastMoveIndex)))"
+    return "(board = \(board), lastMoveIndex = \(lastMoveIndex))"
     }
 }
 
@@ -49,8 +51,8 @@ func successorFunction (currentNode: SearchNode, heuristicFunction: HeuristicFun
     var successorNodes = [SearchNode]()
     
     for index in indexThatCanMove {
-        let childBoard = Board(board: currentNode.board)
-        childBoard.movePiece(index: index) // mutates board
+        let childBoard = Board(board: currentNode.board) // make copy of board
+        childBoard.movePiece(index: index)
         let costOfMove = cost(currentState: currentNode.board, nextState: childBoard)
         var heuristicValue: Double?
         if let heuristicFunctionUnwrapped = heuristicFunction {
@@ -80,18 +82,19 @@ func traceSolution (goalNode: SearchNode, startState: Board, winningMoves: inout
             traceSolution(goalNode: parent, startState: startState, winningMoves: &winningMoves)
         }
     } else {
-        winningMoves = winningMoves.reverse[]()
+        // end of the line
+        winningMoves = winningMoves.reversed()
     }
 }
 
 typealias HeuristicFunctionType = (_ theState: Board) -> Double
 
 func straightLightDistanceHeuristic (theState: Board) -> Double {
-    var straightLineDistances = [Double]()
+    var straightLineDistances = Double()
     var sum: Double = 0
     
-    for (index, _) in enumerate(theState.pieces) {
-        let sld = straightLineDistance(index, theState)
+    for (index, _) in theState.pieces.enumerated(){ //enumerate(theState.pieces) {
+        let sld = straightLineDistance(index: index, theState: theState)
         sum += sld
     }
     
@@ -99,8 +102,8 @@ func straightLightDistanceHeuristic (theState: Board) -> Double {
 }
 
 func straightLineDistance (index: Int, theState: Board) -> Double {
-    let coordinateOfIndex = theState.indexToCoordinate(index)
-    let coordinateOfGoal = theState.indexToCoordinate(theState.pieces[index].winningIndex)
+    let coordinateOfIndex = theState.indexToCoordinate(index: index)
+    let coordinateOfGoal = theState.indexToCoordinate(index: theState.pieces[index].winningIndex)
     
     let xDistance = abs(coordinateOfIndex.x - coordinateOfGoal.x)
     let yDistance = abs(coordinateOfGoal.y - coordinateOfGoal.y)

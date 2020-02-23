@@ -23,7 +23,7 @@ class PuzzleViewController: UIViewController {
     
     required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)!
-        viewsForPieces = generateViewsForAllPieces()
+       // viewsForPieces =  generateViewsForAllPieces()
     }
     
     var sizeOfSquare: (width: CGFloat, height: CGFloat) {

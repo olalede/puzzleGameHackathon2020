@@ -7,9 +7,27 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 
 class SettingsViewController: UIViewController, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Settings Cell", for: indexPath as IndexPath) as UITableViewCell
+        cell.textLabel?.text = Settings.self(rawValue: indexPath.row)?.description()
+        
+        if let currentSetting = Settings.init(rawValue: indexPath.row)  { //fromRaw(indexPath.row) {
+            switch currentSetting {
+            case .BreadthFirstSearch, .AStar:
+                cell.accessoryType = (currentSetting == savedSettings.savedSearchSetting) ? UITableViewCell.AccessoryType.checkmark : UITableViewCell.AccessoryType.none
+                cell.selectionStyle = UITableViewCell.SelectionStyle.default
+            default:
+                break
+        }
+        }
+
+        return cell
+    }
+    
     
    
     @IBOutlet weak var tableView: UITableView!
@@ -37,32 +55,17 @@ class SettingsViewController: UIViewController, UITableViewDataSource {
         return Settings.Count.rawValue
     }
 
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Settings Cell", for: indexPath as IndexPath) as UITableViewCell
-        cell.textLabel?.text = Settings.fromRaw(indexPath.row).description()
-        
-        if let currentSetting = Settings.fromRaw(indexPath.row) {
-            switch currentSetting {
-            case .BreadthFirstSearch, .AStar:
-                cell.accessoryType = (currentSetting == savedSettings.savedSearchSetting) ? UITableViewCellAccessoryType.Checkmark : UITableViewCellAccessoryType.None
-                cell.selectionStyle = UITableViewCell.SelectionStyle.default
-            default:
-                break
-        }
-        }
-
-        return cell
-    }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         let cell = tableView.cellForRow(at: indexPath as IndexPath)
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         
-        if let currentSetting = Settings.fromRaw(indexPath.row) {
+        if let currentSetting = Settings.init(rawValue: indexPath.row){
+        //(indexPath.row) {
             switch currentSetting {
             case .BreadthFirstSearch, .AStar:
                 cell?.accessoryType = UITableViewCell.AccessoryType.checkmark
-                deselectOtherSettings(currentSetting, tableView: tableView)
+                deselectOtherSettings(currentSetting: currentSetting, tableView: tableView)
             default:
                 break
             }
@@ -72,14 +75,14 @@ class SettingsViewController: UIViewController, UITableViewDataSource {
     }
     
     func deselectOtherSettings(currentSetting: Settings, tableView: UITableView) {
-        for rawValue in 0...Settings.Count.toRaw() {
-            if let eachSetting = Settings.fromRaw(rawValue) {
+        for rawValue in 0...Settings.Count.hashValue {
+            if let eachSetting = Settings.init(rawValue: hashValue) {
                 switch eachSetting {
                 case .BreadthFirstSearch, .AStar:
                     if currentSetting != eachSetting {
-                        let indexPath = NSIndexPath(forRow: rawValue, inSection: 0)
-                        let cell = tableView.cellForRowAtIndexPath(indexPath)
-                        cell.accessoryType = UITableViewCellAccessoryType.None
+                        let indexPath = NSIndexPath(row: rawValue, section: 0)
+                        let cell = tableView.cellForRow(at: indexPath as IndexPath)
+                        cell?.accessoryType = UITableViewCell.AccessoryType.none
                     }
                 default:
                     break
