@@ -8,14 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Solve This Picture-->
+        <!--Puzzle Picture-->
         <scene sceneID="M2q-eW-gdO">
             <objects>
                 <collectionViewController id="qjc-NG-pVm" customClass="PuzzleCollectionViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6B5-kq-0QA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="elV-Nh-j0c">
                             <size key="itemSize" width="267" height="219"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -51,7 +51,7 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Picture Puzzle" image="timelapse" catalog="system" id="7CZ-yP-teY"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Solve This Picture" id="yga-tG-ENW">
+                    <navigationItem key="navigationItem" title="Puzzle Picture" id="yga-tG-ENW">
                         <barButtonItem key="backBarButtonItem" title="Back" id="rMH-qF-nxB"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -83,7 +83,7 @@
         <scene sceneID="jkr-cb-wXA">
             <objects>
                 <navigationController id="qd9-hM-CgB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="3 in 1" selectedImage="pencil" catalog="system" id="crr-E5-1mt"/>
+                    <tabBarItem key="tabBarItem" title="3 in 1" image="bell.slash" catalog="system" selectedImage="person.2.fill" id="crr-E5-1mt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j76-ri-b4a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="5184" y="-666"/>
         </scene>
-        <!--View ControllerRPS-->
+        <!--Rock Paper Scissors-->
         <scene sceneID="hHS-Of-2Sv">
             <objects>
                 <viewController id="kyC-1s-OLd" customClass="ViewControllerRPS" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -142,7 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.21201498229999999" green="0.26070641929999999" blue="0.26107878699999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="j9w-av-30Z" firstAttribute="leading" secondItem="ep6-Tm-xzJ" secondAttribute="leadingMargin" id="1nh-xi-lfR"/>
                             <constraint firstItem="j9w-av-30Z" firstAttribute="trailing" secondItem="wkI-jD-WFb" secondAttribute="trailing" id="Oab-xe-xXA"/>
@@ -152,7 +152,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S9q-jv-eh2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="f1O-h8-bGx"/>
+                    <navigationItem key="navigationItem" title="Rock Paper Scissors" id="f1O-h8-bGx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="348-e2-dpu"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNY-ea-0rV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,7 +265,7 @@
         <scene sceneID="Wy7-UM-Hjg">
             <objects>
                 <navigationController id="agw-NH-8d6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="PMw-AN-7kd"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="flame.fill" catalog="system" id="PMw-AN-7kd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xkL-Df-BwR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -278,7 +280,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="bell.slash" catalog="system" width="64" height="64"/>
+        <image name="flame.fill" catalog="system" width="54" height="64"/>
+        <image name="person.2.fill" catalog="system" width="64" height="40"/>
         <image name="resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png" width="75" height="48.75"/>
         <image name="resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png" width="75" height="48.75"/>
         <image name="resize-15824591741604046828rock.png" width="75" height="48.75"/>
