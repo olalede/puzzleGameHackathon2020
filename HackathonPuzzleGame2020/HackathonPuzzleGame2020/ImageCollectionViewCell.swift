@@ -6,4 +6,15 @@
 //  Copyright © 2020 Damilare Olaleye. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ImageCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var puzzleImage: UIImageView!
+   
+    override func awakeFromNib() {
+        self.frame = puzzleImage.frame
+    }
+    
+}
+

@@ -38,6 +38,9 @@
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <size key="customSize" width="267" height="219"/>
+                                <connections>
+                                    <outlet property="puzzleImage" destination="ksI-2B-USd" id="e7h-Ed-XMi"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
