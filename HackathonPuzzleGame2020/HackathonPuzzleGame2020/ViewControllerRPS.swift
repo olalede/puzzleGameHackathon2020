@@ -45,25 +45,25 @@ class ViewControllerRPS: UIViewController {
         }
     }
     
-    func findWinner(_ botChoice: String, _ playerChoice: String) -> String {
-        if (playerChoice != botChoice) {
+    func findWinner(_ siriChoice: String, _ playerChoice: String) -> String {
+        if (playerChoice != siriChoice) {
             switch playerChoice {
             case "rock":
-                if (botChoice == "paper") {
+                if (siriChoice == "paper") {
                     return "Siri Wins"
                 }else {
                     return "You Win!"
                 }
                 
             case "paper":
-                if (botChoice == "scissors") {
+                if (siriChoice == "scissors") {
                     return "Siri Wins"
                 }else {
                     return "You Win!"
                 }
                 
             case "scissors":
-                if (botChoice == "rock") {
+                if (siriChoice == "rock") {
                     return "Siri Wins"
                 }else {
                     return "You Win!"
