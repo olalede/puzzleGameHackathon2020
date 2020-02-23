@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BCT-ok-qpV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="esM-UL-PbO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,7 +13,7 @@
             <objects>
                 <collectionViewController id="qjc-NG-pVm" customClass="PuzzleCollectionViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6B5-kq-0QA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cyan="0.0077472487459999996" magenta="0.59037289959999995" yellow="0.99305159669999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="elV-Nh-j0c">
@@ -55,69 +55,103 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsx-Of-TgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708.69565217391312" y="91.741071428571431"/>
+            <point key="canvasLocation" x="688" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--Puzzle View Controller-->
         <scene sceneID="fMn-Yg-kjD">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="DUU-P3-p2Q" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DUU-P3-p2Q" customClass="PuzzleViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C0R-oh-OUi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIb-kE-yvV">
-                                <rect key="frame" x="138" y="587" width="140" height="45"/>
+                                <rect key="frame" x="138" y="601" width="140" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
                                 <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="ggS-e4-9oU" kind="show" identifier="Show Settings" id="rCg-fe-bIx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfK-fF-GjM">
-                                <rect key="frame" x="8" y="484" width="82" height="43"/>
+                                <rect key="frame" x="9" y="485" width="82" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="27"/>
                                 <state key="normal" title="Solve"/>
+                                <connections>
+                                    <action selector="solveButtonPressed:" destination="DUU-P3-p2Q" eventType="touchUpInside" id="oGH-ON-XUm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngk-77-rCR">
-                                <rect key="frame" x="217" y="490" width="224" height="30"/>
+                                <rect key="frame" x="248" y="492" width="146" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="27"/>
                                 <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="shuffleButtonPressed:" destination="DUU-P3-p2Q" eventType="touchUpInside" id="iJ5-Rr-w1M"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Kil-FQ-wBP"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dZy-Rn-BnB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LBE-aM-EMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279.71014492753625" y="788.83928571428567"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="57.589285714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="BU5-09-3Ux">
             <objects>
-                <viewController id="ggS-e4-9oU" sceneMemberID="viewController">
+                <viewController id="ggS-e4-9oU" customClass="SettingsViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a5P-MU-OyP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeZ-9w-dBk">
                                 <rect key="frame" x="0.0" y="128" width="414" height="327"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="Settings Cell" textLabel="EZq-ZY-73t" style="IBUITableViewCellStyleDefault" id="5ek-rd-5VR">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ek-rd-5VR" id="z8v-Td-WbV">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EZq-ZY-73t">
+                                                    <rect key="frame" x="20" y="0.0" width="342" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uMW-VH-k20"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lap-ry-duI"/>
+                    <connections>
+                        <outlet property="tableView" destination="NeZ-9w-dBk" id="dzi-mx-rMI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziz-KB-hKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1194.2028985507247" y="790.84821428571422"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Picture Puzzle-->
         <scene sceneID="m0x-Ui-gxT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BCT-ok-qpV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Picture Puzzle" selectedImage="rectangle.3.offgrid" catalog="system" id="sOa-jU-VhJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cwy-AV-FSZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -125,12 +159,51 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qjc-NG-pVm" kind="relationship" relationship="rootViewController" id="77D-gX-a6p"/>
+                        <segue destination="qjc-NG-pVm" kind="show" identifier="no identifier" id="wwn-Oo-6g2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6x-U0-gHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.13043478260872" y="91.741071428571431"/>
+            <point key="canvasLocation" x="689.85507246376812" y="-839.0625"/>
+        </scene>
+        <!--Number Puzzle-->
+        <scene sceneID="NeJ-1R-7m3">
+            <objects>
+                <navigationController id="hHb-Ea-NRP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Number Puzzle" selectedImage="list.number" catalog="system" id="uvZ-hw-wQo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WVV-i2-2cN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DUU-P3-p2Q" kind="show" identifier="no identifier" id="82E-U0-fE7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIn-Xb-RCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-839"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VYs-6Q-dbY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="esM-UL-PbO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L1y-ft-f8C">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BCT-ok-qpV" kind="relationship" relationship="viewControllers" id="HLm-sq-x6c"/>
+                        <segue destination="hHb-Ea-NRP" kind="relationship" relationship="viewControllers" id="mU7-RC-F4W"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYm-Td-mdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220.28985507246378" y="-839.0625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.number" catalog="system" width="64" height="48"/>
+        <image name="rectangle.3.offgrid" catalog="system" width="64" height="40"/>
+    </resources>
 </document>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,14 @@
 		7828EBC12402320400F49379 /* HacktonPuzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBBF2402320400F49379 /* HacktonPuzzle.xcdatamodeld */; };
 		7828EBC32402322D00F49379 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBC22402322D00F49379 /* Alert.swift */; };
 		7828EBC524023AEA00F49379 /* bgsu puzzle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBC424023AE900F49379 /* bgsu puzzle.png */; };
+		7828EBC724025EF800F49379 /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBC624025EF800F49379 /* SearchNode.swift */; };
+		7828EBC924025FDF00F49379 /* BFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBC824025FDF00F49379 /* BFS.swift */; };
+		7828EBCB2402605800F49379 /* AStarSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBCA2402605800F49379 /* AStarSearch.swift */; };
+		7828EBCD2402613C00F49379 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBCC2402613C00F49379 /* Board.swift */; };
+		7828EBCF2402634400F49379 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBCE2402634400F49379 /* PieceView.swift */; };
+		7828EBD12402639D00F49379 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBD02402639D00F49379 /* PuzzleViewController.swift */; };
+		7828EBD3240268BC00F49379 /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBD2240268BC00F49379 /* SettingsStorage.swift */; };
+		7828EBD52402695900F49379 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBD42402695800F49379 /* SettingsViewController.swift */; };
 		E8E18766533100A5BE4B7B93 /* Pods_HackathonPuzzleGame2020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0AA1B5CAB496691655524E1 /* Pods_HackathonPuzzleGame2020Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +76,14 @@
 		7828EBC02402320400F49379 /* HackathonPuzzleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackathonPuzzleModel.xcdatamodel; sourceTree = "<group>"; };
 		7828EBC22402322D00F49379 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		7828EBC424023AE900F49379 /* bgsu puzzle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgsu puzzle.png"; sourceTree = SOURCE_ROOT; };
+		7828EBC624025EF800F49379 /* SearchNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
+		7828EBC824025FDF00F49379 /* BFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFS.swift; sourceTree = "<group>"; };
+		7828EBCA2402605800F49379 /* AStarSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStarSearch.swift; sourceTree = "<group>"; };
+		7828EBCC2402613C00F49379 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		7828EBCE2402634400F49379 /* PieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
+		7828EBD02402639D00F49379 /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
+		7828EBD2240268BC00F49379 /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
+		7828EBD42402695800F49379 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		987A4CA34DA8ADA5F885CD34 /* Pods-HackathonPuzzleGame2020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020Tests.debug.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020Tests/Pods-HackathonPuzzleGame2020Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2DC053B06586C5B3B6D26DE /* Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.release.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.release.xcconfig"; sourceTree = "<group>"; };
 		E04BA638DC1DC4E76987CFFF /* Pods-HackathonPuzzleGame2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020.release.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020/Pods-HackathonPuzzleGame2020.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +157,14 @@
 				7828EBBB24022FBA00F49379 /* ImageCollectionViewCell.swift */,
 				7828EBBD240230D200F49379 /* PuzzleCollectionViewController.swift */,
 				7828EBC22402322D00F49379 /* Alert.swift */,
+				7828EBC624025EF800F49379 /* SearchNode.swift */,
+				7828EBC824025FDF00F49379 /* BFS.swift */,
+				7828EBCA2402605800F49379 /* AStarSearch.swift */,
+				7828EBCC2402613C00F49379 /* Board.swift */,
+				7828EBCE2402634400F49379 /* PieceView.swift */,
+				7828EBD02402639D00F49379 /* PuzzleViewController.swift */,
+				7828EBD2240268BC00F49379 /* SettingsStorage.swift */,
+				7828EBD42402695800F49379 /* SettingsViewController.swift */,
 			);
 			path = HackathonPuzzleGame2020;
 			sourceTree = "<group>";
@@ -183,7 +207,6 @@
 				987A4CA34DA8ADA5F885CD34 /* Pods-HackathonPuzzleGame2020Tests.debug.xcconfig */,
 				72928AA0FCC27A96B81A8E8B /* Pods-HackathonPuzzleGame2020Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -428,12 +451,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7828EBBA24022E8900F49379 /* HacktonPuzzle.swift in Sources */,
+				7828EBC924025FDF00F49379 /* BFS.swift in Sources */,
+				7828EBD12402639D00F49379 /* PuzzleViewController.swift in Sources */,
+				7828EBCD2402613C00F49379 /* Board.swift in Sources */,
 				7828EBBC24022FBA00F49379 /* ImageCollectionViewCell.swift in Sources */,
 				7828EB8E2402267400F49379 /* ViewController.swift in Sources */,
+				7828EBC724025EF800F49379 /* SearchNode.swift in Sources */,
+				7828EBD52402695900F49379 /* SettingsViewController.swift in Sources */,
 				7828EB8A2402267400F49379 /* AppDelegate.swift in Sources */,
+				7828EBD3240268BC00F49379 /* SettingsStorage.swift in Sources */,
 				7828EBBE240230D200F49379 /* PuzzleCollectionViewController.swift in Sources */,
 				7828EBC12402320400F49379 /* HacktonPuzzle.xcdatamodeld in Sources */,
+				7828EBCB2402605800F49379 /* AStarSearch.swift in Sources */,
 				7828EBC32402322D00F49379 /* Alert.swift in Sources */,
+				7828EBCF2402634400F49379 /* PieceView.swift in Sources */,
 				7828EB8C2402267400F49379 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
