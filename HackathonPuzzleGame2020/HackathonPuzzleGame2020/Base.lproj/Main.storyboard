@@ -3,11 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BGSU Hackathon 2020-->
+        <!--Solve This Picture-->
         <scene sceneID="M2q-eW-gdO">
             <objects>
                 <collectionViewController id="qjc-NG-pVm" customClass="PuzzleCollectionViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,13 +49,70 @@
                             <outlet property="delegate" destination="qjc-NG-pVm" id="Xsz-Wr-Wi8"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="BGSU Hackathon 2020" id="yga-tG-ENW">
+                    <navigationItem key="navigationItem" title="Solve This Picture" id="yga-tG-ENW">
                         <barButtonItem key="backBarButtonItem" title="Back" id="rMH-qF-nxB"/>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsx-Of-TgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708.69565217391312" y="91.741071428571431"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fMn-Yg-kjD">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="DUU-P3-p2Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C0R-oh-OUi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIb-kE-yvV">
+                                <rect key="frame" x="138" y="587" width="140" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
+                                <state key="normal" title="Settings"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfK-fF-GjM">
+                                <rect key="frame" x="8" y="484" width="82" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="27"/>
+                                <state key="normal" title="Solve"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngk-77-rCR">
+                                <rect key="frame" x="217" y="490" width="224" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="27"/>
+                                <state key="normal" title="Shuffle"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Kil-FQ-wBP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBE-aM-EMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.71014492753625" y="788.83928571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BU5-09-3Ux">
+            <objects>
+                <viewController id="ggS-e4-9oU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5P-MU-OyP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeZ-9w-dBk">
+                                <rect key="frame" x="0.0" y="128" width="414" height="327"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uMW-VH-k20"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ziz-KB-hKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194.2028985507247" y="790.84821428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m0x-Ui-gxT">

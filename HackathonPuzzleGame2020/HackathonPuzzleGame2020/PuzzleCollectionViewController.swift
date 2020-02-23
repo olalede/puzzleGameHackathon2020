@@ -16,9 +16,9 @@ class PuzzleCollectionViewController: UICollectionViewController {
 
     
 var puzzle = [
-    HacktonPuzzle(title: "Dr.Chao?", solvedImages: ["dr_chaobg","drchao_leftface","drchao_rightface","drchaosuit","drchaoleftsuit","drchaorightarm","drchaorisuite","drchorite"]),
-              HacktonPuzzle(title: "Dr.Jake Lee", solvedImages: ["drjakebk","drjakechest","drjakechin-1","drjakechin","drjakeface",
-                                                        "drjakelefarm","drjakelefchin","drjakeleftsuit","drjakelfeye","drjakerigharm","drjakerighsu","drjakesuite","drjaketie","drjaketieleft"]) ,
+    HacktonPuzzle(title: "Dr.Jake?", solvedImages: ["drJake1","drJake2","drJake3","drJake4","drJake5","drJake6"]),
+              HacktonPuzzle(title: "Professor Green", solvedImages: ["green1","green2","green3","green4","green5",
+                                                        "green6"]) ,
               HacktonPuzzle(title: "BGSU", solvedImages: ["bgsu1","bgsu2","bgsu3","bgsu4","bgsu5","bgsu6","bgsu7",
                                                       "bgsu8","bgsu9"])]
     
