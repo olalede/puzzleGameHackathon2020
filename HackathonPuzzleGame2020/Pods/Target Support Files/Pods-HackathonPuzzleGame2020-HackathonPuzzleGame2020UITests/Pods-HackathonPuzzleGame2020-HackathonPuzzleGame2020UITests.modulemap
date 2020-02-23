@@ -1,6 +1,0 @@
-framework module Pods_HackathonPuzzleGame2020_HackathonPuzzleGame2020UITests {
-  umbrella header "Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

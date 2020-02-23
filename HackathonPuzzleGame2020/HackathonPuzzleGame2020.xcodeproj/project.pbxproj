@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E9575272CD483F090791986 /* Pods_HackathonPuzzleGame2020_HackathonPuzzleGame2020UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E8844E365FAEAEEDF9B35C /* Pods_HackathonPuzzleGame2020_HackathonPuzzleGame2020UITests.framework */; };
-		4FB76227D55AE371C45B856D /* Pods_HackathonPuzzleGame2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FF72D28214C68200D14F20 /* Pods_HackathonPuzzleGame2020.framework */; };
 		7828EB8A2402267400F49379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EB892402267400F49379 /* AppDelegate.swift */; };
 		7828EB8C2402267400F49379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EB8B2402267400F49379 /* SceneDelegate.swift */; };
 		7828EB8E2402267400F49379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EB8D2402267400F49379 /* ViewController.swift */; };
@@ -23,19 +21,12 @@
 		7828EBC12402320400F49379 /* HacktonPuzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBBF2402320400F49379 /* HacktonPuzzle.xcdatamodeld */; };
 		7828EBC32402322D00F49379 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBC22402322D00F49379 /* Alert.swift */; };
 		7828EBC524023AEA00F49379 /* bgsu puzzle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBC424023AE900F49379 /* bgsu puzzle.png */; };
-		7828EBDB24029AA300F49379 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBD824029AA200F49379 /* paper.png */; };
-		7828EBDC24029AA300F49379 /* rock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBD924029AA200F49379 /* rock.jpg */; };
-		7828EBDD24029AA300F49379 /* scissors.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBDA24029AA300F49379 /* scissors.png */; };
-		7828EBDF24029EE500F49379 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBDE24029EE400F49379 /* rock.png */; };
-		7828EBE124029F1E00F49379 /* resize-1582458760577264455ClipartKey1094170.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBE024029F1D00F49379 /* resize-1582458760577264455ClipartKey1094170.png */; };
-		7828EBE324029F5300F49379 /* resize-1582458815897805259ClipartKey1094183.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBE224029F5300F49379 /* resize-1582458815897805259ClipartKey1094183.png */; };
 		7828EBE82402A0D000F49379 /* resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBE42402A0D000F49379 /* resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png */; };
 		7828EBE92402A0D000F49379 /* resize-15824591741604046828rock.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBE52402A0D000F49379 /* resize-15824591741604046828rock.png */; };
 		7828EBEA2402A0D000F49379 /* resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBE62402A0D000F49379 /* resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png */; };
 		7828EBEB2402A0D000F49379 /* resize-15824590691802298449rock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7828EBE72402A0D000F49379 /* resize-15824590691802298449rock.jpg */; };
 		7828EBED2402A5F300F49379 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBEC2402A5F300F49379 /* ResultsViewController.swift */; };
 		7828EBEF2402A63100F49379 /* ViewControllerRPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828EBEE2402A63100F49379 /* ViewControllerRPS.swift */; };
-		E8E18766533100A5BE4B7B93 /* Pods_HackathonPuzzleGame2020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0AA1B5CAB496691655524E1 /* Pods_HackathonPuzzleGame2020Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		29C355932C8D82E57D977AEF /* Pods-HackathonPuzzleGame2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020.debug.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020/Pods-HackathonPuzzleGame2020.debug.xcconfig"; sourceTree = "<group>"; };
-		58E8844E365FAEAEEDF9B35C /* Pods_HackathonPuzzleGame2020_HackathonPuzzleGame2020UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonPuzzleGame2020_HackathonPuzzleGame2020UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		71AE302DF2882AF0572952F6 /* Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.debug.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		72928AA0FCC27A96B81A8E8B /* Pods-HackathonPuzzleGame2020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020Tests.release.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020Tests/Pods-HackathonPuzzleGame2020Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7828EB862402267400F49379 /* HackathonPuzzleGame2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonPuzzleGame2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7828EB892402267400F49379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7828EB8B2402267400F49379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,23 +67,12 @@
 		7828EBC02402320400F49379 /* HackathonPuzzleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackathonPuzzleModel.xcdatamodel; sourceTree = "<group>"; };
 		7828EBC22402322D00F49379 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		7828EBC424023AE900F49379 /* bgsu puzzle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgsu puzzle.png"; sourceTree = SOURCE_ROOT; };
-		7828EBD824029AA200F49379 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper.png; sourceTree = SOURCE_ROOT; };
-		7828EBD924029AA200F49379 /* rock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpg; sourceTree = SOURCE_ROOT; };
-		7828EBDA24029AA300F49379 /* scissors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissors.png; sourceTree = SOURCE_ROOT; };
-		7828EBDE24029EE400F49379 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = SOURCE_ROOT; };
-		7828EBE024029F1D00F49379 /* resize-1582458760577264455ClipartKey1094170.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resize-1582458760577264455ClipartKey1094170.png"; sourceTree = SOURCE_ROOT; };
-		7828EBE224029F5300F49379 /* resize-1582458815897805259ClipartKey1094183.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resize-1582458815897805259ClipartKey1094183.png"; sourceTree = SOURCE_ROOT; };
 		7828EBE42402A0D000F49379 /* resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png"; sourceTree = SOURCE_ROOT; };
 		7828EBE52402A0D000F49379 /* resize-15824591741604046828rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resize-15824591741604046828rock.png"; sourceTree = SOURCE_ROOT; };
 		7828EBE62402A0D000F49379 /* resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png"; sourceTree = SOURCE_ROOT; };
 		7828EBE72402A0D000F49379 /* resize-15824590691802298449rock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "resize-15824590691802298449rock.jpg"; sourceTree = SOURCE_ROOT; };
 		7828EBEC2402A5F300F49379 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		7828EBEE2402A63100F49379 /* ViewControllerRPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRPS.swift; sourceTree = "<group>"; };
-		987A4CA34DA8ADA5F885CD34 /* Pods-HackathonPuzzleGame2020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020Tests.debug.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020Tests/Pods-HackathonPuzzleGame2020Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A2DC053B06586C5B3B6D26DE /* Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.release.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.release.xcconfig"; sourceTree = "<group>"; };
-		E04BA638DC1DC4E76987CFFF /* Pods-HackathonPuzzleGame2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonPuzzleGame2020.release.xcconfig"; path = "Target Support Files/Pods-HackathonPuzzleGame2020/Pods-HackathonPuzzleGame2020.release.xcconfig"; sourceTree = "<group>"; };
-		E0AA1B5CAB496691655524E1 /* Pods_HackathonPuzzleGame2020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonPuzzleGame2020Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5FF72D28214C68200D14F20 /* Pods_HackathonPuzzleGame2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonPuzzleGame2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FB76227D55AE371C45B856D /* Pods_HackathonPuzzleGame2020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E18766533100A5BE4B7B93 /* Pods_HackathonPuzzleGame2020Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9575272CD483F090791986 /* Pods_HackathonPuzzleGame2020_HackathonPuzzleGame2020UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +108,6 @@
 				7828EBAA2402267900F49379 /* HackathonPuzzleGame2020UITests */,
 				7828EB872402267400F49379 /* Products */,
 				BBDE06F9B41240A86BE2CE5E /* Pods */,
-				796B8CB9AB127DC0071C1C17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,19 +125,13 @@
 			isa = PBXGroup;
 			children = (
 				7828EB892402267400F49379 /* AppDelegate.swift */,
-				7828EBE024029F1D00F49379 /* resize-1582458760577264455ClipartKey1094170.png */,
-				7828EBDE24029EE400F49379 /* rock.png */,
 				7828EB8B2402267400F49379 /* SceneDelegate.swift */,
 				7828EB942402267800F49379 /* LaunchScreen.storyboard */,
-				7828EBE224029F5300F49379 /* resize-1582458815897805259ClipartKey1094183.png */,
 				7828EBE62402A0D000F49379 /* resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png */,
 				7828EBE72402A0D000F49379 /* resize-15824590691802298449rock.jpg */,
 				7828EBE42402A0D000F49379 /* resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png */,
 				7828EBE52402A0D000F49379 /* resize-15824591741604046828rock.png */,
 				7828EB8D2402267400F49379 /* ViewController.swift */,
-				7828EBD824029AA200F49379 /* paper.png */,
-				7828EBD924029AA200F49379 /* rock.jpg */,
-				7828EBDA24029AA300F49379 /* scissors.png */,
 				7828EB8F2402267400F49379 /* Main.storyboard */,
 				7828EBBF2402320400F49379 /* HacktonPuzzle.xcdatamodeld */,
 				7828EB922402267800F49379 /* Assets.xcassets */,
@@ -199,25 +165,9 @@
 			path = HackathonPuzzleGame2020UITests;
 			sourceTree = "<group>";
 		};
-		796B8CB9AB127DC0071C1C17 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F5FF72D28214C68200D14F20 /* Pods_HackathonPuzzleGame2020.framework */,
-				58E8844E365FAEAEEDF9B35C /* Pods_HackathonPuzzleGame2020_HackathonPuzzleGame2020UITests.framework */,
-				E0AA1B5CAB496691655524E1 /* Pods_HackathonPuzzleGame2020Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BBDE06F9B41240A86BE2CE5E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				29C355932C8D82E57D977AEF /* Pods-HackathonPuzzleGame2020.debug.xcconfig */,
-				E04BA638DC1DC4E76987CFFF /* Pods-HackathonPuzzleGame2020.release.xcconfig */,
-				71AE302DF2882AF0572952F6 /* Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.debug.xcconfig */,
-				A2DC053B06586C5B3B6D26DE /* Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.release.xcconfig */,
-				987A4CA34DA8ADA5F885CD34 /* Pods-HackathonPuzzleGame2020Tests.debug.xcconfig */,
-				72928AA0FCC27A96B81A8E8B /* Pods-HackathonPuzzleGame2020Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -229,11 +179,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7828EBB02402267900F49379 /* Build configuration list for PBXNativeTarget "HackathonPuzzleGame2020" */;
 			buildPhases = (
-				F5884613463FD03C2262473C /* [CP] Check Pods Manifest.lock */,
 				7828EB822402267400F49379 /* Sources */,
 				7828EB832402267400F49379 /* Frameworks */,
 				7828EB842402267400F49379 /* Resources */,
-				3BAA937E15AFA95EB8C5A14F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,7 +196,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7828EBB32402267900F49379 /* Build configuration list for PBXNativeTarget "HackathonPuzzleGame2020Tests" */;
 			buildPhases = (
-				6FA785327FAB8F878451B63E /* [CP] Check Pods Manifest.lock */,
 				7828EB982402267900F49379 /* Sources */,
 				7828EB992402267900F49379 /* Frameworks */,
 				7828EB9A2402267900F49379 /* Resources */,
@@ -267,11 +214,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7828EBB62402267900F49379 /* Build configuration list for PBXNativeTarget "HackathonPuzzleGame2020UITests" */;
 			buildPhases = (
-				1490956F8556A63028D078FA /* [CP] Check Pods Manifest.lock */,
 				7828EBA32402267900F49379 /* Sources */,
 				7828EBA42402267900F49379 /* Frameworks */,
 				7828EBA52402267900F49379 /* Resources */,
-				243BBDAB52F4EC2DA6E6DCA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,17 +279,11 @@
 				7828EB962402267800F49379 /* LaunchScreen.storyboard in Resources */,
 				7828EBEA2402A0D000F49379 /* resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png in Resources */,
 				7828EBEB2402A0D000F49379 /* resize-15824590691802298449rock.jpg in Resources */,
-				7828EBE124029F1E00F49379 /* resize-1582458760577264455ClipartKey1094170.png in Resources */,
-				7828EBDB24029AA300F49379 /* paper.png in Resources */,
-				7828EBDF24029EE500F49379 /* rock.png in Resources */,
 				7828EBC524023AEA00F49379 /* bgsu puzzle.png in Resources */,
 				7828EBE82402A0D000F49379 /* resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png in Resources */,
-				7828EBDD24029AA300F49379 /* scissors.png in Resources */,
 				7828EB932402267800F49379 /* Assets.xcassets in Resources */,
-				7828EBDC24029AA300F49379 /* rock.jpg in Resources */,
 				7828EBE92402A0D000F49379 /* resize-15824591741604046828rock.png in Resources */,
 				7828EB912402267400F49379 /* Main.storyboard in Resources */,
-				7828EBE324029F5300F49379 /* resize-1582458815897805259ClipartKey1094183.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,109 +302,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1490956F8556A63028D078FA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		243BBDAB52F4EC2DA6E6DCA5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests/Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3BAA937E15AFA95EB8C5A14F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HackathonPuzzleGame2020/Pods-HackathonPuzzleGame2020-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HackathonPuzzleGame2020/Pods-HackathonPuzzleGame2020-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackathonPuzzleGame2020/Pods-HackathonPuzzleGame2020-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6FA785327FAB8F878451B63E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HackathonPuzzleGame2020Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5884613463FD03C2262473C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HackathonPuzzleGame2020-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7828EB822402267400F49379 /* Sources */ = {
@@ -652,7 +488,6 @@
 		};
 		7828EBB12402267900F49379 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29C355932C8D82E57D977AEF /* Pods-HackathonPuzzleGame2020.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -671,7 +506,6 @@
 		};
 		7828EBB22402267900F49379 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E04BA638DC1DC4E76987CFFF /* Pods-HackathonPuzzleGame2020.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -690,7 +524,6 @@
 		};
 		7828EBB42402267900F49379 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 987A4CA34DA8ADA5F885CD34 /* Pods-HackathonPuzzleGame2020Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -713,7 +546,6 @@
 		};
 		7828EBB52402267900F49379 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72928AA0FCC27A96B81A8E8B /* Pods-HackathonPuzzleGame2020Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -736,7 +568,6 @@
 		};
 		7828EBB72402267900F49379 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71AE302DF2882AF0572952F6 /* Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -757,7 +588,6 @@
 		};
 		7828EBB82402267900F49379 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2DC053B06586C5B3B6D26DE /* Pods-HackathonPuzzleGame2020-HackathonPuzzleGame2020UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
