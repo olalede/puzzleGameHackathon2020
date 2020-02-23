@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="esM-UL-PbO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qSE-Oy-DIo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,9 +13,9 @@
             <objects>
                 <collectionViewController id="qjc-NG-pVm" customClass="PuzzleCollectionViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6B5-kq-0QA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cyan="0.0077472487459999996" magenta="0.59037289959999995" yellow="0.99305159669999998" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="elV-Nh-j0c">
                             <size key="itemSize" width="267" height="219"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -49,161 +49,241 @@
                             <outlet property="delegate" destination="qjc-NG-pVm" id="Xsz-Wr-Wi8"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Picture Puzzle" image="timelapse" catalog="system" id="7CZ-yP-teY"/>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Solve This Picture" id="yga-tG-ENW">
                         <barButtonItem key="backBarButtonItem" title="Back" id="rMH-qF-nxB"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsx-Of-TgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="36"/>
-        </scene>
-        <!--Puzzle View Controller-->
-        <scene sceneID="fMn-Yg-kjD">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="DUU-P3-p2Q" customClass="PuzzleViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C0R-oh-OUi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIb-kE-yvV">
-                                <rect key="frame" x="138" y="601" width="140" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="ggS-e4-9oU" kind="show" identifier="Show Settings" id="rCg-fe-bIx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfK-fF-GjM">
-                                <rect key="frame" x="9" y="485" width="82" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="27"/>
-                                <state key="normal" title="Solve"/>
-                                <connections>
-                                    <action selector="solveButtonPressed:" destination="DUU-P3-p2Q" eventType="touchUpInside" id="oGH-ON-XUm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngk-77-rCR">
-                                <rect key="frame" x="248" y="492" width="146" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="27"/>
-                                <state key="normal" title="Shuffle"/>
-                                <connections>
-                                    <action selector="shuffleButtonPressed:" destination="DUU-P3-p2Q" eventType="touchUpInside" id="iJ5-Rr-w1M"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Kil-FQ-wBP"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="dZy-Rn-BnB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LBE-aM-EMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="57.589285714285708"/>
-        </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="BU5-09-3Ux">
-            <objects>
-                <viewController id="ggS-e4-9oU" customClass="SettingsViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a5P-MU-OyP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeZ-9w-dBk">
-                                <rect key="frame" x="0.0" y="128" width="414" height="327"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="Settings Cell" textLabel="EZq-ZY-73t" style="IBUITableViewCellStyleDefault" id="5ek-rd-5VR">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ek-rd-5VR" id="z8v-Td-WbV">
-                                            <rect key="frame" x="0.0" y="0.0" width="370" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EZq-ZY-73t">
-                                                    <rect key="frame" x="20" y="0.0" width="342" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="uMW-VH-k20"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="lap-ry-duI"/>
-                    <connections>
-                        <outlet property="tableView" destination="NeZ-9w-dBk" id="dzi-mx-rMI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ziz-KB-hKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1194.2028985507247" y="790.84821428571422"/>
-        </scene>
-        <!--Picture Puzzle-->
-        <scene sceneID="m0x-Ui-gxT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BCT-ok-qpV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Picture Puzzle" selectedImage="rectangle.3.offgrid" catalog="system" id="sOa-jU-VhJ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cwy-AV-FSZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="qjc-NG-pVm" kind="show" identifier="no identifier" id="wwn-Oo-6g2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o6x-U0-gHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="689.85507246376812" y="-839.0625"/>
-        </scene>
-        <!--Number Puzzle-->
-        <scene sceneID="NeJ-1R-7m3">
-            <objects>
-                <navigationController id="hHb-Ea-NRP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Number Puzzle" selectedImage="list.number" catalog="system" id="uvZ-hw-wQo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WVV-i2-2cN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="DUU-P3-p2Q" kind="show" identifier="no identifier" id="82E-U0-fE7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yIn-Xb-RCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1716" y="-839"/>
+            <point key="canvasLocation" x="4264" y="377"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="VYs-6Q-dbY">
+        <scene sceneID="fRL-RT-ql2">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="esM-UL-PbO" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qSE-Oy-DIo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L1y-ft-f8C">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JTO-1I-PC9">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BCT-ok-qpV" kind="relationship" relationship="viewControllers" id="HLm-sq-x6c"/>
-                        <segue destination="hHb-Ea-NRP" kind="relationship" relationship="viewControllers" id="mU7-RC-F4W"/>
+                        <segue destination="agw-NH-8d6" kind="relationship" relationship="viewControllers" id="7X5-of-fLj"/>
+                        <segue destination="qd9-hM-CgB" kind="relationship" relationship="viewControllers" id="Ri7-yZ-3Hn"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fYm-Td-mdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hx5-mV-xGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-220.28985507246378" y="-839.0625"/>
+            <point key="canvasLocation" x="4454" y="-1360"/>
+        </scene>
+        <!--3 in 1-->
+        <scene sceneID="jkr-cb-wXA">
+            <objects>
+                <navigationController id="qd9-hM-CgB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="3 in 1" selectedImage="paperplane" catalog="system" id="crr-E5-1mt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j76-ri-b4a">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kyC-1s-OLd" kind="show" id="HOP-Wh-TBv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tmt-4s-d5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5184" y="-666"/>
+        </scene>
+        <!--View ControllerRPS-->
+        <scene sceneID="hHS-Of-2Sv">
+            <objects>
+                <viewController id="kyC-1s-OLd" customClass="ViewControllerRPS" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ep6-Tm-xzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j9w-av-30Z">
+                                <rect key="frame" x="20" y="279" width="348.5" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goj-Xl-oZ9">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="65"/>
+                                        <state key="normal" image="resize-15824591741604046828rock.png"/>
+                                        <connections>
+                                            <action selector="play:" destination="kyC-1s-OLd" eventType="touchUpInside" id="HYP-gS-IXg"/>
+                                            <segue destination="k6T-OU-FjM" kind="show" identifier="showResults" id="wlQ-dp-u4n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHM-iA-d2W">
+                                        <rect key="frame" x="116" y="0.0" width="116.5" height="65"/>
+                                        <state key="normal" image="resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png"/>
+                                        <connections>
+                                            <action selector="play:" destination="kyC-1s-OLd" eventType="touchUpInside" id="0Sk-eb-ZOD"/>
+                                            <segue destination="k6T-OU-FjM" kind="show" identifier="showResults" id="A9X-Ka-2XC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRf-jJ-hbo">
+                                        <rect key="frame" x="232.5" y="0.0" width="116" height="65"/>
+                                        <state key="normal" image="resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png"/>
+                                        <connections>
+                                            <segue destination="k6T-OU-FjM" kind="show" identifier="showResults" id="nhI-gP-ccU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Button from the List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkI-jD-WFb">
+                                <rect key="frame" x="20" y="398" width="348.5" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="VYK-UN-rGB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j9w-av-30Z" firstAttribute="leading" secondItem="ep6-Tm-xzJ" secondAttribute="leadingMargin" id="1nh-xi-lfR"/>
+                            <constraint firstItem="j9w-av-30Z" firstAttribute="trailing" secondItem="wkI-jD-WFb" secondAttribute="trailing" id="Oab-xe-xXA"/>
+                            <constraint firstItem="j9w-av-30Z" firstAttribute="top" secondItem="S9q-jv-eh2" secondAttribute="top" constant="279" id="Z9b-hw-QDd"/>
+                            <constraint firstItem="wkI-jD-WFb" firstAttribute="top" secondItem="j9w-av-30Z" secondAttribute="bottom" constant="54" id="nqo-eU-WdG"/>
+                            <constraint firstItem="j9w-av-30Z" firstAttribute="leading" secondItem="wkI-jD-WFb" secondAttribute="leading" id="qcv-FV-kHt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S9q-jv-eh2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f1O-h8-bGx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNY-ea-0rV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5183" y="376"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="oyL-4j-XkM">
+            <objects>
+                <viewController id="k6T-OU-FjM" customClass="ResultsViewController" customModule="HackathonPuzzleGame2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="okQ-SI-KJX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Iz-7f-dt2">
+                                <rect key="frame" x="0.0" y="278" width="311" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="scK-3d-Nez">
+                                        <rect key="frame" x="0.0" y="0.0" width="155.5" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siri choice is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W6-WW-oWt">
+                                                <rect key="frame" x="7" y="0.0" width="141.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your choice is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOv-TT-bvU">
+                                                <rect key="frame" x="0.0" y="30" width="155.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The winner is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpS-UN-jpo">
+                                                <rect key="frame" x="6" y="60" width="143.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-Rg-R8l">
+                                        <rect key="frame" x="155.5" y="0.0" width="155.5" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SiriChoice:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-Hw-dyA">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayerChoice:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0E-zZ-pxr">
+                                                <rect key="frame" x="0.0" y="29" width="155.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE9-eE-gXR">
+                                                <rect key="frame" x="0.0" y="59" width="155.5" height="31"/>
+                                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <color key="highlightedColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="shadowColor" red="0.16708454819999999" green="0.31387106129999998" blue="0.7893401015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzu-pg-HcT">
+                                <rect key="frame" x="96" y="533" width="205" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NnT-gB-BMy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="23"/>
+                                <state key="normal" title="Play Again?"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daA-fA-fPq">
+                                <rect key="frame" x="168" y="599" width="67" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Quit"/>
+                                <connections>
+                                    <action selector="Dismiss:" destination="k6T-OU-FjM" eventType="touchUpInside" id="e3K-to-DUu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hzu-pg-HcT" firstAttribute="leading" secondItem="RUc-LH-K7p" secondAttribute="leading" constant="96" id="3rM-M5-jaT"/>
+                            <constraint firstItem="2Iz-7f-dt2" firstAttribute="leading" secondItem="RUc-LH-K7p" secondAttribute="leading" id="U4X-yl-LJF"/>
+                            <constraint firstItem="2Iz-7f-dt2" firstAttribute="top" secondItem="RUc-LH-K7p" secondAttribute="top" constant="278" id="WLK-Y0-7yh"/>
+                            <constraint firstItem="RUc-LH-K7p" firstAttribute="bottom" secondItem="Hzu-pg-HcT" secondAttribute="bottom" constant="245" id="YTD-S3-RzR"/>
+                            <constraint firstItem="RUc-LH-K7p" firstAttribute="trailing" secondItem="Hzu-pg-HcT" secondAttribute="trailing" constant="113" id="jeX-IO-4Eb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RUc-LH-K7p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gLA-5n-4pf"/>
+                    <connections>
+                        <outlet property="PlayerChoice" destination="J0E-zZ-pxr" id="iml-bL-XN6"/>
+                        <outlet property="SiriChoice" destination="pTv-Hw-dyA" id="M65-eL-s4W"/>
+                        <outlet property="playAgain" destination="Hzu-pg-HcT" id="2ms-Lp-qr3"/>
+                        <outlet property="winner" destination="ZE9-eE-gXR" id="Fo4-C8-TeV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNI-6b-4Yg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6547.826086956522" y="375.66964285714283"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Wy7-UM-Hjg">
+            <objects>
+                <navigationController id="agw-NH-8d6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PMw-AN-7kd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xkL-Df-BwR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qjc-NG-pVm" kind="relationship" relationship="rootViewController" id="SWz-V1-v5T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whk-9F-aU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3858" y="-640"/>
         </scene>
     </scenes>
     <resources>
-        <image name="list.number" catalog="system" width="64" height="48"/>
-        <image name="rectangle.3.offgrid" catalog="system" width="64" height="40"/>
+        <image name="paperplane" catalog="system" width="64" height="60"/>
+        <image name="resize-1582459116136661027resize1582458815897805259ClipartKey1094183.png" width="75" height="48.75"/>
+        <image name="resize-15824591501982636795resize1582458760577264455ClipartKey1094170.png" width="75" height="48.75"/>
+        <image name="resize-15824591741604046828rock.png" width="75" height="48.75"/>
+        <image name="timelapse" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wlQ-dp-u4n"/>
+    </inferredMetricsTieBreakers>
 </document>
